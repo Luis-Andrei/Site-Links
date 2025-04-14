@@ -4,91 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de links pessoal de Luis Andrei">
+    <meta name="description" content="Back-end / Front-end e mais...">
     <title>@Luis Andrei</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
+            font-family: -apple-system, system-ui, sans-serif;
             margin: 0;
             padding: 20px;
+            color: #ffffff;
+            line-height: 1.6;
             min-height: 100vh;
-            background-color: #e5e7eb;
-            font-family: -apple-system, system-ui, sans-serif;
-            font-weight: 600;
+            background: #1e1e2f;
+            font-weight: 500;
         }
 
         .container {
             max-width: 600px;
             margin: 40px auto;
             padding: 30px;
-            background-color: transparent;
+            background: transparent;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         h1 {
             font-size: 28px;
-            margin: 0 0 10px 0;
+            margin-bottom: 10px;
             font-weight: 700;
+            color: #ffffff;
         }
 
-        p {
-            margin: 0 0 30px 0;
+        .profile p {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-weight: 500;
+            opacity: 0.9;
         }
 
         .links {
+            display: grid;
+            gap: 15px;
             margin: 20px 0;
         }
 
-        .links a {
-            display: block;
-            padding: 15px;
-            margin-bottom: 10px;
-            color: #000;
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             text-decoration: none;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 8px;
-            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .links a i {
-            margin-right: 10px;
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.15);
         }
+
+        .link-card i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #ffffff;
+        }
+
+        .link-card-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link-card span {
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .link-card p {
+            margin: 4px 0 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .fa-github { color: #24292e; }
+        .fa-linkedin { color: #0a66c2; }
+        .fa-twitter { color: #1da1f2; }
+        .fa-instagram { color: #e4405f; }
 
         footer {
+            text-align: center;
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            text-align: center;
+            color: #ffffff;
             font-size: 14px;
+            font-weight: 500;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>@Luis Andrei</h1>
-        <p>Olá! Bem-vindo à minha página de links</p>
+        <div class="profile">
+            <h1>@Luis Andrei</h1>
+            <p>Olá! Bem-vindo à minha página de links<br>
+            Estudando Back-end / Front-end com Python, JavaScript e Go.</p>
+        </div>
 
         <div class="links">
-            <a href="https://github.com/Luis-Andrei">
+            <a href="https://github.com/Luis-Andrei" class="link-card">
                 <i class="fab fa-github"></i>
-                GitHub
+                <div class="link-card-content">
+                    <span>GitHub</span>
+                    <p>Confira meus projetos e contribuições</p>
+                </div>
             </a>
-            <a href="https://www.linkedin.com/in/luis-andrei-258b54212">
+            <a href="https://www.linkedin.com/in/luis-andrei-258b54212" class="link-card">
                 <i class="fab fa-linkedin"></i>
-                LinkedIn
+                <div class="link-card-content">
+                    <span>LinkedIn</span>
+                    <p>Minha experiência profissional</p>
+                </div>
             </a>
-            <a href="https://twitter.com/luisand36562626">
+            <a href="https://twitter.com/luisand36562626" class="link-card">
                 <i class="fab fa-twitter"></i>
-                Twitter
+                <div class="link-card-content">
+                    <span>Twitter</span>
+                    <p>Atualizações e pensamentos</p>
+                </div>
             </a>
-            <a href="https://www.instagram.com/luis_andrei_552/">
+            <a href="https://www.instagram.com/luis_andrei_552/" class="link-card">
                 <i class="fab fa-instagram"></i>
-                Instagram
+                <div class="link-card-content">
+                    <span>Instagram</span>
+                    <p>Fotos e momentos do dia a dia</p>
+                </div>
             </a>
         </div>
 
         <footer>
-            © 2025 Luis Andrei. Todos os direitos reservados.
+            © 2025 Luis Andrei. Todos os direitos reservados.<br>
+            @Luis Andrei
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
