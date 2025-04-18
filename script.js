@@ -405,21 +405,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Confetes ao clicar nos links
     document.querySelectorAll('.link-card').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const url = link.getAttribute('href');
-            
+        link.addEventListener('click', () => {
             // Criar confetes
             confetti({
                 particleCount: 100,
                 spread: 70,
                 origin: { y: 0.6 }
             });
-
-            // Redirecionar após animação
-            setTimeout(() => {
-                window.open(url, '_blank');
-            }, 500);
         });
     });
 
